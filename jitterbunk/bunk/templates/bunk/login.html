@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+  <div class="heading">
+  
+    <h1> log in </h1>
+
+  </div>
+
+<div class="wrapper">
+    <br/>
+    <h3>{{ state }}</h3>
+    <br/>
+
+    <div class="login_form">
+        
+        <form action="/login/" method="post">{% csrf_token %}
+            <div id="login-form-left">
+                {% if next %}
+                <input type="hidden" name="next" value="{{ next }}" />
+                {% endif %}
+                <div id="username">
+                    username:
+                    <input type="text" name="username" value="{{ username }}" />
+                </div>
+                <div id="password">
+                    password:
+                    <input type="password" name="password" value="" />
+                </div>
+            </div>
+            <div id="login-form-right">
+                <input type="submit" class="button" value="log in!" />
+            </div>
+        </form>
+
+    </div>
+
+</div>
+
+{% endblock %}

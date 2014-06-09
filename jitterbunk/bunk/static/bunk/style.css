@@ -1,0 +1,295 @@
+/************************************************
+GENERAL
+************************************************/
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* id styling */
+.wrapper {
+    margin: 10px auto;
+    width: 50%;
+    padding: 0 50px 50px 50px;
+}
+
+a {
+    text-decoration: none;
+    color: #296629;
+}
+
+img {
+    max-width: 100%;
+}
+
+h3 {
+    margin: 0 0 1em 0;
+}
+
+h1 {
+    margin: 0 0 1em 0;
+}
+
+
+/************************************************
+NAV
+************************************************/
+
+#nav-container {
+    background-color: #c2ffc2;
+    overflow:hidden;
+}
+/*
+#profile-photo {
+    display: inline-block;
+    max-width: 50px;
+    height: 50px;
+    width: 50px;
+    margin: 1px;
+    border-radius: 10px;
+}*/
+
+.site-info {
+    width: 40%;
+    float:left;
+}
+
+#headline {
+    padding: 10px;
+    margin: 10px;
+    font-weight: bolder;
+}
+
+nav {
+    text-align: left;
+    padding : 10px 0 0 10px;
+    margin: 0 0 0 10px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav a {
+    font-size: 20px;
+    font-weight: 800;
+    padding: 0 15px 0 0;
+}
+
+/*.nav-profile {
+    background-color: purple;
+    width: 40%;
+    float:right;
+}*/
+
+
+/************************************************
+HEADING
+************************************************/
+
+.heading {
+    margin: 0 auto;
+    width: 100%;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+.heading h1 {
+    text-align: center;
+    background-color: #d3d3d3;
+    padding: 10px;
+}
+
+h1 {
+    font-family: 'Oxygen', sans-serif;
+    margin: 0;
+    font-size: 3em;
+    font-weight: lighter;
+    line-height: 0.8em;
+}
+
+
+/************************************************
+BUNKS LISTS
+************************************************/
+
+.bunk_list {
+    margin: 0;
+    padding: 20px 0;
+}
+
+.bunkli {
+    background-color: #d3d3d3;
+    padding: 10px;
+    border: 2px solid black;
+    margin: 0 0 20px 0;
+
+}
+
+/* selected bunk li color */
+.bunkli:hover {
+    background-color: #c2ffc2;
+
+    -webkit-box-shadow: 5px 5px 10px #666;
+    -moz-box-shadow: 5px 5px 10px #666;
+    box-shadow: 5px 5px 10px #666;
+    z-index:-1;
+}
+
+.bunk-photo {
+    display: inline-block;
+    max-width: 50px;
+    height: 50px;
+    width: 50px;
+    margin: 1px;
+    border-radius: 10px;
+}
+
+.from_user {
+    width: 20%;
+    margin-left: 50px;
+    display: inline-block;
+}
+
+.to_user {
+    width: 20%;
+    margin-left: 40px;
+    margin-right: 20px;
+    display: inline-block;
+}
+
+
+/************************************************
+BUNK FORM
+************************************************/
+
+.bunk_form {
+    margin: 0 auto;
+    width: 100%;
+}
+
+#bunk-selection {
+    overflow:hidden;
+    width:450px;
+    margin: 0 auto;
+    background: url("/static/img/dropdown_arrow.png") no-repeat #ffc 400px 1px;
+    /* dropdown_arrow.png is 50px by 75px image */
+}
+select {
+    padding-left: 50px;
+    border:0;
+    font-size: 20px;
+    background:transparent;
+    height:75px;
+    width:450px;
+    border:1px solid #296629;
+    border-radius: 0px;
+    
+    -webkit-appearance: none;
+}
+
+#bunk-form-left {
+    margin-left: 20px;
+    width: 70%;
+    float:left;
+}
+
+#bunk-form-right {
+    width: 20%;
+    float:left;
+}
+
+
+/************************************************
+LOGIN PAGE
+************************************************/
+
+.login_form {
+    overflow:hidden;
+    margin: 0 auto;
+    width: 100%;
+}
+
+#login-form-left {
+    border:1px solid #296629;
+    margin: 0 20px auto;
+    width: 50%;
+    float:left;
+    background-color: #ffc;
+}
+
+#login-form-right {
+    width: 20%;
+    float:left;
+}
+
+#username {
+    margin: 10px 5px 5px 20px;
+}
+
+#password {
+    margin: 5px 7px 10px 20px;
+}
+
+input {
+    padding-left: 5px;
+    border:0;
+    font-size: 15px;
+    background:transparent;
+    height:20px;
+    width:200px;
+    border:1px solid #296629;
+    border-radius: 0px;
+    
+    -webkit-appearance: none;
+}
+
+#username input {
+    margin-left: 13px;
+}
+
+#password input {
+    margin-left: 15px;
+}
+
+
+/************************************************
+COLORS and BUTTONS
+************************************************/
+
+.button {
+    margin: 0 auto;
+    color: #296629;
+    font-family: 'Oxygen', sans-serif;
+    font-size: 20px;
+    font-weight: bolder;
+    width: 135px;
+    height: 75px;
+    border: 2px solid #296629;
+    padding: 0;
+    background: #d3d3d3; 
+}
+
+.button.selected,  .button:hover {
+    color: #d3d3d3;
+    background: #296629;
+
+}
+
+/* nav link */
+a,  a:visited {
+    color: #296629;
+}
+
+/* selected nav link color */
+a.selected,  a:hover {
+    color: #d3d3d3;
+}

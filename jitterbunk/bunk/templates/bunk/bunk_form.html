@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+  <div class="heading">
+    <h1> Bunk Form</h1>
+
+  </div>
+
+
+<div class="wrapper">
+	<br/>
+	<h3>Hi {{ user }}! </h3>
+	<br/>
+	{% if context %}
+	to
+	{% endif %}
+
+	{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+	<div class="bunk_form">
+		<div id="bunk-form-left">
+		<form action="{% url 'bunk:bunked' %}" method="post">
+			{% csrf_token %}
+			<div id="bunk-selection">
+			<select name="to" id="form">
+				<option selected value='default'>Who do you want to bunk?</option>
+				{% for to in user_list %}
+				    <option value="{{to.id}}">{{to.username}}</option>
+				{% endfor %}
+			</select>
+			</div>
+		</div>
+		
+		<div id="bunk-form-right">
+			<input type="submit" class="button" value="bunk!" />
+		</div>
+		</form>
+	</div>
+</div>
+
+{% endblock %}
+

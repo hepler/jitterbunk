@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+  <div class="heading">
+  
+    <h1> Main Bunk Feed </h1>
+
+  </div>
+
+
+<div class="wrapper">
+  <br/>
+  <h3>Hi {{ user }}! </h3>
+  <br/>
+  <ul class="bunk_list">
+  {% if recent_bunk_list %}
+    {% for bunk in recent_bunk_list %}
+    <div class="bunkli"> 
+      {% load staticfiles %}
+      <div class="from_user">
+        <a href="/bunks/{{bunk.from_user.id}}">
+        <img class="bunk-photo" src="{% static "img/filler_photo.png" %}"/>
+        {{ bunk.from_user }}
+        </a>
+      </div>
+      bunked   
+      <div class="to_user">
+        <a href="/bunks/{{bunk.to_user.id}}">
+        <img class="bunk-photo" src="{% static "img/filler_photo.png" %}"/>
+        {{ bunk.to_user }}
+        </a>
+      </div>
+      at {{ bunk.time }} 
+    </div>
+    {% endfor %}
+  </ul>
+  </div>
+  {% else %}
+    <p>No bunks are available.</p>
+  {% endif %}
+</div>
+
+{% endblock %}
